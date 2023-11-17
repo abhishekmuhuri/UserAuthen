@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    {% if current_user.is_authenticated %}
+    <h1 class="display-4">Welcome {{current_user.username}}</h1>
+    {% else %}
+    <h1 class="display-4">Welcome, Please Login/Register</h1>
+    {% endif %}
+    <p class="lead">This is User Authentication Page</p>
+  </div>
+</div>
+{% endblock %}
